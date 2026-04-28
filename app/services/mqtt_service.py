@@ -99,6 +99,10 @@ def start_mqtt(loop: asyncio.AbstractEventLoop) -> None:
 
     _client = mqtt.Client(transport="websockets")
     _client.username_pw_set(settings.MQTT_USER, settings.MQTT_PASS)
+    
+    _client.ws_set_options(path="/mqtt")
+    _client.tls_set()
+
     _client.on_connect = _on_connect
     _client.on_message = _on_message
 
