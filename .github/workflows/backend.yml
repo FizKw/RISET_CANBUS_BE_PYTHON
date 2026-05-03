@@ -41,7 +41,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             set -e
-            cd ./docker/python-backend
+            cd ./docker/python_backend
             git fetch origin
             git reset --hard origin/main
             docker compose down
