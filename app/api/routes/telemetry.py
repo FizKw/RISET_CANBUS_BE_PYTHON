@@ -36,7 +36,7 @@ def _serialize(doc: dict) -> dict:
 
 @router.get("/test")
 async def test():
-    return "test"
+    return "health check OK"
 
 
 # ---------------------------------------------------------------------------
